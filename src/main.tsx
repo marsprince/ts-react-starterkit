@@ -1,10 +1,10 @@
 import * as React from 'react';
-import App from '@/app';
 import { render } from 'react-dom';
 
 import './style/index.scss';
+import MyRouter from '@/my-router';
 
 render(
-  <App/>,
+  <MyRouter/>,
   document.getElementById('app') as HTMLElement,
 );
