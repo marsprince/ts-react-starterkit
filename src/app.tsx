@@ -1,6 +1,7 @@
 import * as React from 'react';
 import logo from './assets/logo.svg';
 import './style/app.scss';
+import HelloWorld from '@/views/helloWorld';
 
 class App extends React.Component {
   public render() {
@@ -10,9 +11,7 @@ class App extends React.Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <HelloWorld msg={'123'}/>
       </div>
     );
   }
