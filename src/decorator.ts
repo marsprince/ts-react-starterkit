@@ -1,13 +1,13 @@
 export interface WatchOptions {
   type?: string;
   key: '';
-  callback: Function;
+  callback: (...args: any[]) => any;
 }
 
 export interface PatchOptions {
   watchType: string;
   watchKey: string;
-  callback: Function;
+  callback: (...args: any[]) => any;
   lifeCycle: string | string[];
 }
 
@@ -32,7 +32,7 @@ export const Watch = (opts: string | WatchOptions) => {
   return (target: any, key: any, pro?: any) => {
     const componentDidMount = target.componentDidMount;
     target.componentDidMount = function() {
-      let patchOptions: PatchOptions = {
+      const patchOptions: PatchOptions = {
         watchType: 'state',
         lifeCycle: 'componentDidUpdate',
       } as PatchOptions;

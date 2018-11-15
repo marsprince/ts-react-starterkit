@@ -8,13 +8,13 @@ const user = {
 
 // props接口
 export interface HelloWorldProps {
-  msg: string
-  user?: typeof user
+  msg: string;
+  user?: typeof user;
 }
 
 // state接口
 export interface HelloWorldState {
-  stateX: string
+  stateX: string;
 }
 
 export default class HelloWorld extends React.Component<HelloWorldProps, HelloWorldState> {
@@ -40,8 +40,8 @@ export default class HelloWorld extends React.Component<HelloWorldProps, HelloWo
 
   // watch
   @Watch('stateX')
-  public watchMethod = (key:string) => {
-    console.log(`watch ${key} change`)
+  public watchMethod = (key: string) => {
+    console.log(`watch ${key} change`);
   };
 
   private testMethod = () => {
